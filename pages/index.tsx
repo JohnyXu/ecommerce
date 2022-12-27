@@ -2,9 +2,8 @@ import React from 'react';
 
 import { client } from '../lib/client';
 
-import FooterBanner from '../components/FooterBanner';
-import HeroBanner from '../components/HeroBanner/HeroBanner';
 import { IBanner, IProduct } from '../types';
+import { HeroBanner, FooterBanner, Product } from '../components';
 
 interface HomeProps {
   products: IProduct[];
@@ -19,7 +18,11 @@ const Home = ({ products, bannerData }: HomeProps) => {
         <h2>Best Seller Products</h2>
         <p>speaker There are many variations passages</p>
       </div>
-
+      <div className="products-container">
+        {products?.map((product) => (
+          <Product key={product._id} product={product} />
+        ))}
+      </div>
       <FooterBanner />
     </div>
   );

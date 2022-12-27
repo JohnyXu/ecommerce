@@ -3,10 +3,10 @@ import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 export interface IProduct {
   _id: string;
   name: string;
-  slug: string;
+  slug: ISanitySlug;
   price: number;
   details: string;
-  image: SanityImageSource;
+  image: SanityImageSource[];
 }
 
 export interface IBanner {
