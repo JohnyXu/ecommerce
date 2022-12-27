@@ -3,12 +3,18 @@ import React from 'react';
 import { client } from '../lib/client';
 
 import FooterBanner from '../components/FooterBanner';
-import HeroBanner from '../components/HeroBanner';
+import HeroBanner from '../components/HeroBanner/HeroBanner';
+import { IBanner, IProduct } from '../types';
 
-const Home = () => {
+interface HomeProps {
+  products: IProduct[];
+  bannerData: IBanner[];
+}
+
+const Home = ({ products, bannerData }: HomeProps) => {
   return (
     <div>
-      <HeroBanner />
+      {bannerData.length > 0 ? <HeroBanner heroBanner={bannerData[0]} /> : null}
       <div className="products-heading">
         <h2>Best Seller Products</h2>
         <p>speaker There are many variations passages</p>
