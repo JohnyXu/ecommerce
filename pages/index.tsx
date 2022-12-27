@@ -23,7 +23,7 @@ const Home = ({ products, bannerData }: HomeProps) => {
           <Product key={product._id} product={product} />
         ))}
       </div>
-      <FooterBanner />
+      {bannerData.length > 0 ? <FooterBanner footerBanner={bannerData[0]} /> : null}
     </div>
   );
 };
