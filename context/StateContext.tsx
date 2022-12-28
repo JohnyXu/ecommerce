@@ -3,22 +3,37 @@ import { toast } from 'react-hot-toast';
 import { IProduct } from '../types';
 
 interface IState {
-  showCart?: boolean;
-  setShowCart?: (show: boolean) => void;
-  cartItems?: IProduct[];
-  totalPrice?: number;
-  totalQuantities?: number;
-  qty?: number;
-  incQty?: () => void;
-  decQty?: () => void;
-  onAdd?: (item: IProduct, quantity: number) => void;
-  toggleCartItemQuanitity?: (id: string, value: string) => void;
-  onRemove?: (item: IProduct) => void;
-  setCartItems?: (items: IProduct[]) => void;
-  setTotalPrice?: (num: number) => void;
-  setTotalQuantities?: (num: number) => void;
+  showCart: boolean;
+  setShowCart: (show: boolean) => void;
+  cartItems: IProduct[];
+  totalPrice: number;
+  totalQuantities: number;
+  qty: number;
+  incQty: () => void;
+  decQty: () => void;
+  onAdd: (item: IProduct, quantity: number) => void;
+  toggleCartItemQuanitity: (id: string, value: string) => void;
+  onRemove: (item: IProduct) => void;
+  setCartItems: (items: IProduct[]) => void;
+  setTotalPrice: (num: number) => void;
+  setTotalQuantities: (num: number) => void;
 }
-const SContext = createContext<IState>({});
+const SContext = createContext<IState>({
+  showCart: false,
+  setShowCart: () => {},
+  cartItems: [],
+  totalPrice: 0,
+  totalQuantities: 0,
+  qty: 0,
+  incQty: () => {},
+  decQty: () => {},
+  onAdd: (item: IProduct, quantity: number) => {},
+  toggleCartItemQuanitity: (id: string, value: string) => {},
+  onRemove: (item: IProduct) => {},
+  setCartItems: (items: IProduct[]) => {},
+  setTotalPrice: (num: number) => {},
+  setTotalQuantities: (num: number) => {},
+});
 
 export const StateContext = ({ children }: PropsWithChildren) => {
   const [showCart, setShowCart] = useState(false);

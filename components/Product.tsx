@@ -10,7 +10,6 @@ interface ProductProps {
 }
 const Product = ({ product }: ProductProps) => {
   const { image, slug, name, price } = product;
-  console.log('slug:', slug);
 
   return (
     <div>
