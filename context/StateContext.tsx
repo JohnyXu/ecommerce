@@ -18,7 +18,7 @@ interface IState {
   setTotalPrice?: (num: number) => void;
   setTotalQuantities?: (num: number) => void;
 }
-const SContext = createContext<IState | null>(null);
+const SContext = createContext<IState>({});
 
 export const StateContext = ({ children }: PropsWithChildren) => {
   const [showCart, setShowCart] = useState(false);
