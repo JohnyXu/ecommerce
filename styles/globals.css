@@ -174,3 +174,12 @@ a {
   font-size: 14px;
   font-weight: 300;
 }
+
+.layout {
+  padding: 10px;
+}
+.main-container {
+  max-width: 1400px;
+  margin: auto;
+  width: 100%;
+}

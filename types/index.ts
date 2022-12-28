@@ -6,6 +6,7 @@ export interface IProduct {
   slug: ISanitySlug;
   price: number;
   details: string;
+  quantity: number;
   image: SanityImageSource[];
 }
 
