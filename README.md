@@ -1,7 +1,13 @@
+
+## Installation
+
 npm install --legacy-peer-deps
-npm install --legacy-peer-deps
 
 
 
-4242 4242 4242 4242
-04/24 424
+## Test Credit card
+```
+Card NO: 4242 4242 4242 4242
+Date: 04/24
+CVC: 424
+```
