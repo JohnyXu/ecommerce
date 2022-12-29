@@ -16,7 +16,7 @@ const Home = ({ products, bannerData }: HomeProps) => {
       {bannerData.length > 0 ? <HeroBanner heroBanner={bannerData[0]} /> : null}
       <div className="products-heading">
         <h2>Best Seller Products</h2>
-        <p>There are many cool products/p>
+        <p>There are many cool products</p>
       </div>
       <div className="products-container">
         {products?.map((product) => (
