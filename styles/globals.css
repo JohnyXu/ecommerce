@@ -379,6 +379,28 @@ a {
   margin-top: 20px;
 }
 
+.marquee-text {
+  font-size: 29px;
+  font-weight: 600;
+  margin: 60px 0px;
+  color: #f02d34;
+}
+.marquee {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .track {
   position: absolute;
   white-space: nowrap;
@@ -531,6 +553,7 @@ a {
 }
 
 .total {
+  padding: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -602,6 +625,7 @@ a {
   .footer-banner-container {
     height: 560px;
     margin-top: 80px;
+    padding: 40px 30px;
   }
   .footer-banner-image {
     width: 77%;
@@ -657,7 +681,7 @@ a {
   }
   .cart-container {
     width: 415px;
-    padding: 4px;
+    padding: 30px;
   }
   .cart-heading {
     margin-top: 35px;
@@ -707,6 +731,7 @@ a {
   .total h3 {
     font-size: 20px;
   }
+
   .track {
     animation: marquee 10s linear infinite;
     width: 550%;
